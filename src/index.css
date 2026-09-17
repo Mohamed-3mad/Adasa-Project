@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #f66d14;
+  --color-brand-dark: #ff5f00;
+  --color-ink-950: #0b0d0e;
+  --color-ink-900: #111516;
+  --color-ink-800: #1d2324;
+  --color-ink-700: #2a3233;
+  --color-ink-600: #3a4445;
+}
+
+@layer base {
+  html {
+    direction: rtl;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: #0b0d0e;
+    color: #f3f4f6;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+
+  ::selection {
+    background: rgba(16, 185, 129, 0.35);
+    color: white;
+  }
+}
+
+@layer components {
+  .container-x {
+    width: min(1200px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    background: #f66d14;
+    color: white;
+    font-weight: 700;
+    transition: 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background: #ff5f00;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    border: 1px solid #2a3233;
+    background: rgba(17, 21, 22, 0.8);
+    color: #d1d5db;
+    font-weight: 700;
+    transition: 0.2s ease;
+  }
+
+  .btn-ghost:hover {
+    border-color: #f66d14;
+    color: white;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid #2a3233;
+    background: #111516;
+    color: #9ca3af;
+    border-radius: 9999px;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .chip-active {
+    background: #f66d14;
+    border-color: #f66d14;
+    color: white;
+  }
+
+  .card {
+    background: #111516;
+    border: 1px solid #1d2324;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    transition: 0.25s ease;
+  }
+
+  .card:hover {
+    border-color: oklch(70.5% 0.213 47.604);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
