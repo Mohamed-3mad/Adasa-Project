@@ -18,7 +18,7 @@ export default function Home() {
     { icon: 'penNib', value: posts.length + '+', label: 'مقالة' },
     { icon: 'users', value: '10+ آلاف', label: 'قارئ' },
     { icon: 'folder', value: String(categories.length), label: 'تصنيفات' },
-    { icon: 'userTie', value: String(new Set(posts.map(p => p.author.name)).size), label: 'كاتب' },
+    { icon: 'penNib', value: String(new Set(posts.map(p => p.author.name)).size), label: 'كاتب' },
   ]
 
   const categoryIcons = {
